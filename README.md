@@ -8,9 +8,9 @@
 
 ## 📖 Descrição do Sistema
 
-O Sistema de Gerenciamento de Colaboradores foi desenvolvido para auxiliar uma empresa no gerenciamento de informações de seus funcionários.
+O Sistema de Gerenciamento de Colaboradores foi desenvolvido para auxiliar uma empresa no gerenciamento das informações de seus funcionários.
 
-A aplicação permite cadastrar, consultar, atualizar e remover colaboradores por meio de uma API REST integrada ao banco de dados MySQL. Além disso, possui uma interface web simples para cadastro e visualização dos dados armazenados.
+A aplicação permite cadastrar, listar, atualizar e remover colaboradores por meio de uma API REST integrada ao banco de dados MySQL. Além disso, possui uma interface web simples para facilitar a visualização e o gerenciamento dos dados.
 
 ---
 
@@ -45,24 +45,19 @@ A aplicação permite cadastrar, consultar, atualizar e remover colaboradores po
 Sistema-de-gerenciamento-de-colaboradores/
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
 │
 ├── src/
 │   └── database/
 │       └── connection.js
 │
-├── prints-postman/
-│   ├── GET-colaboradores.png
-│   ├── POST-colaborador.png
-│   ├── PUT-colaborador.png
-│   └── DELETE-colaborador.png
-│
-├── prints-sistema/
-│   ├── tela-inicial.png
-│   ├── cadastro-colaborador.png
-│   └── listagem-colaboradores.png
+├── prints/
+│   ├── estrutura.png
+│   ├── mysql.png
+│   ├── postman-delete.png
+│   ├── postman-get.png
+│   ├── postman-post.png
+│   ├── postman-put.png
+│   └── tela.png
 │
 ├── database.sql
 ├── server.js
@@ -98,19 +93,21 @@ empresa
 
 ## 🔗 Integração com MySQL
 
-A API utiliza a biblioteca **mysql2** para realizar a conexão com o banco de dados MySQL.
+A API utiliza a biblioteca **mysql2** para estabelecer conexão com o banco de dados MySQL.
 
-Arquivo responsável pela conexão:
+O arquivo responsável pela conexão é:
 
 ```text
 src/database/connection.js
 ```
 
-Todas as informações dos colaboradores são armazenadas diretamente no banco de dados, garantindo persistência dos dados.
+Todas as operações de cadastro, consulta, atualização e exclusão são realizadas diretamente no banco de dados, garantindo persistência das informações.
 
 ---
 
 ## 🚀 Funcionamento da API
+
+A API segue o padrão REST e disponibiliza as seguintes rotas:
 
 ### ➕ Cadastrar colaborador
 
@@ -136,7 +133,7 @@ PUT /colaboradores/:id
 DELETE /colaboradores/:id
 ```
 
-Todas as respostas da API são retornadas em formato JSON.
+Todas as respostas são retornadas em formato JSON.
 
 ---
 
@@ -144,19 +141,19 @@ Todas as respostas da API são retornadas em formato JSON.
 
 ### ➕ Create
 
-Permite cadastrar novos colaboradores.
+Cadastro de novos colaboradores.
 
 ### 📖 Read
 
-Permite visualizar os colaboradores cadastrados.
+Listagem de colaboradores cadastrados.
 
 ### ✏️ Update
 
-Permite atualizar informações dos colaboradores.
+Atualização dos dados dos colaboradores.
 
 ### 🗑️ Delete
 
-Permite remover colaboradores do sistema.
+Remoção de colaboradores do sistema.
 
 ---
 
@@ -166,45 +163,50 @@ A interface web permite:
 
 * ✅ Cadastrar colaboradores;
 * ✅ Listar colaboradores cadastrados;
-* ✅ Enviar informações para a API;
-* ✅ Exibir dados armazenados no banco de dados.
+* ✅ Enviar dados para a API;
+* ✅ Exibir informações armazenadas no banco de dados.
 
-A comunicação entre frontend e backend é realizada por meio de requisições HTTP utilizando JavaScript.
+A comunicação entre frontend e backend é realizada através de requisições HTTP utilizando JavaScript.
 
 ---
 
 ## 🧪 Testes Realizados no Postman
 
-Todas as rotas da API foram testadas utilizando o Postman.
-
-### Rotas testadas
+Foram realizados testes em todas as rotas da API:
 
 * ✅ POST – Cadastro de colaborador
 * ✅ GET – Listagem de colaboradores
 * ✅ PUT – Atualização de colaborador
 * ✅ DELETE – Remoção de colaborador
 
-As evidências dos testes estão disponíveis na pasta:
+As evidências dos testes podem ser encontradas na pasta:
 
 ```text
-prints-postman/
+prints/
 ```
+
+Arquivos:
+
+* postman-post.png
+* postman-get.png
+* postman-put.png
+* postman-delete.png
 
 ---
 
 ## 📸 Evidências do Sistema
 
-As capturas de tela do funcionamento da aplicação estão disponíveis na pasta:
+As capturas de tela do sistema estão disponíveis na pasta:
 
 ```text
-prints-sistema/
+prints/
 ```
 
-Incluindo:
+Arquivos:
 
-* Tela inicial
-* Cadastro de colaboradores
-* Listagem de colaboradores
+* tela.png
+* mysql.png
+* estrutura.png
 
 ---
 
@@ -252,26 +254,20 @@ ou
 npm start
 ```
 
-### 6️⃣ Abrir o frontend
+### 6️⃣ Executar o Frontend
 
-Abra o arquivo:
-
-```text
-frontend/index.html
-```
-
-em seu navegador.
+Abra o arquivo HTML localizado na pasta `frontend` em seu navegador.
 
 ---
 
 ## 📊 Dados Utilizados
 
-O sistema possui registros de colaboradores com informações coerentes para uma empresa real, atendendo aos requisitos da atividade.
+O sistema possui mais de 10 colaboradores cadastrados, contendo informações coerentes com um ambiente empresarial real, atendendo aos requisitos da atividade.
 
 ---
 
 ## 🎯 Considerações Finais
 
-Este projeto foi desenvolvido para aplicar os conhecimentos adquiridos em Node.js, Express, MySQL, APIs REST, CRUD, JSON, integração Frontend/Backend e testes utilizando o Postman.
+Este projeto foi desenvolvido com o objetivo de aplicar os conhecimentos adquiridos em Node.js, Express, MySQL, APIs REST, CRUD, JSON, integração Frontend/Backend e testes utilizando o Postman.
 
-A aplicação simula um sistema real de gerenciamento de colaboradores, permitindo o armazenamento e gerenciamento eficiente das informações dos funcionários da empresa.
+A aplicação simula um sistema real de gerenciamento de colaboradores, permitindo o armazenamento e gerenciamento eficiente das informações dos funcionários de uma empresa.

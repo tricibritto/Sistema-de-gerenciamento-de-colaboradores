@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Colaboradores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>👥 Sistema de Gestão de Colaboradores</h1>
+    <p class="subtitulo">
+    Cadastro e gerenciamento de funcionários da empresa
+</p>
+
+    <form id="formColaborador">
+
+        <input type="text" id="nome" placeholder="Nome Completo" required>
+
+        <input type="number" id="idade" placeholder="Idade" required>
+
+        <input type="text" id="cargo" placeholder="Cargo" required>
+
+        <input type="number" id="salario" placeholder="Salário" required>
+
+        <input type="number" id="tempoEmpresa" placeholder="Tempo de Empresa" required>
+
+        <input type="date" id="dataAdmissao" required>
+
+        <input type="text" id="setor" placeholder="Setor" required>
+
+        <select id="status">
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <h2>Lista de Colaboradores</h2>
+
+    <div id="lista"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
